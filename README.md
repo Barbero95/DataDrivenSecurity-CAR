@@ -2,7 +2,7 @@
 
 Se descargan todos los ficheros yaml de https://github.com/mitre-attack/car/tree/master/analytics y se generan dos dataframes a partir de la info extraida.
 
-Primer dataframe (variable en car.R -> df)
+## Primer dataframe (variable en car.R -> df)
 
 Parametros que encontramos:
 
@@ -19,3 +19,12 @@ Parametros que encontramos:
   
 - subtechniques: //TODO
   - Tipos: Situational Awareness, TTP, Situational Awareness, Detection, Anomaly
+
+## Segundo dataframe (variable en car.R -> dfCoverage)
+
+  - id: Nombre del fichero yaml que se ha extraido la info
+  - Technique: //TODO
+  - Tactics: //TODO
+  - Coverage: //TODO
+    - Tipos: Low, Moderate, High
+  - Subtechniques: //TODO
