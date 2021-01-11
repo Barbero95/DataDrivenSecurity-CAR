@@ -58,6 +58,10 @@ df <- lapply(temporaryFiles, function(temporaryFile) {
 df <- do.call(rbind, df)
 df$submission_date <- as.Date(df$submission_date)
 
+print(unique(df$subtypes))
+print("-----")
+print(unique(df$analytic_types))
+
 # Second dataframe that we generate, this includes the coverage of all files.
 dfCoverage <- plyr::ldply(temporaryFiles, function(temporaryFile) {
   rawCarAnalyticData <- yaml::read_yaml(temporaryFile)
@@ -77,3 +81,6 @@ dfCoverage <- plyr::ldply(temporaryFiles, function(temporaryFile) {
   })
   k
 })
+
+#save(df, file = "generalDataFrame.rda")
+#save(dfCoverage, file = "coverageDataFrame.rda")
