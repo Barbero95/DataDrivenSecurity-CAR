@@ -2,6 +2,8 @@
 
 Se descargan todos los ficheros yaml de https://github.com/mitre-attack/car/tree/master/analytics y se generan dos dataframes a partir de la info extraida.
 
+Como punto de interés, en esta url https://car.mitre.org/analytics/ encontramos dos tablas, la primera relaciona los ficheros con las técnicas de ATT&CK, las implementaciones y las plataformas que afecta y la segunda encontramos sobre las técnicas de ATT&CK y las subtecnicas en que ficheros encontramos información sobre ellas.
+
 ## Primer dataframe (variable en car.R -> df)
 
 Parametros que encontramos:
@@ -21,6 +23,8 @@ Parametros que encontramos:
   - Tipos: Situational Awareness, TTP, Situational Awareness, Detection, Anomaly
 
 ## Segundo dataframe (variable en car.R -> dfCoverage)
+
+Las técnicas hacen referencia a ATT&CK Techniques
 
   - id: Nombre del fichero yaml que se ha extraido la info
   - Technique: //TODO
