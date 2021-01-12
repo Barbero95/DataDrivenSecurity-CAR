@@ -1,32 +1,31 @@
 # DataDrivenSecurity-CAR
 
-Se descargan todos los ficheros yaml de https://github.com/mitre-attack/car/tree/master/analytics y se generan dos dataframes a partir de la info extraida.
+All the yaml files are downloaded from https://github.com/mitre-attack/car/tree/master/analytics and two dataframes are generated from the information in the files
 
-Como punto de interés, en esta url https://car.mitre.org/analytics/ encontramos dos tablas, la primera relaciona los ficheros con las técnicas de ATT&CK, las implementaciones y las plataformas que afecta y la segunda encontramos sobre las técnicas de ATT&CK y las subtecnicas en que ficheros encontramos información sobre ellas.
+As a point of interest, in this url https://car.mitre.org/analytics/ we find two tables, the first one relates the files with the ATT&CK techniques, the implementations and the platforms it affects. The second we find about ATT&CK techniques and the subtechniques in which files we find information about them.
 
-## Primer dataframe (variable en car.R -> df)
+## First dataframe (variable en car.R -> df)
 
-Parametros que encontramos:
+Parameters of interest:
 
-- id: Nombre del fichero yaml que se ha extraido la info
+- id: Name of the yaml file
 - Title: //TODO
 - Description: //TODO
 - Submission_date: //TODO
-- Information_domain: //TODO
-  - Tipos: Analalytic, Host, Network
-- platforms: //TODO
+- Information_domain: The information domain is the top-level categorization of the analytic. It should describe the type of analytic: Is it based on anomaly detection? A specific behavior? Statistical analysis?
+  - There are five possible information domains: Host, Network, and Analytic, External, and Other.
+- platforms: Platforms affected
   - Tipos: Windows, Linux, macOS
 - subtypes: //TODO
   - Tipos: Registry, Login, Process, PCAP, Netflow, Network, Network Process, Network Process File, Network Registry File, Map building, Anomal, Hostflow, Process DLL, Registry File Process, Hostflow, API RPC, File API, Network API RPC, Event Records.
-  
 - subtechniques: //TODO
   - Tipos: Situational Awareness, TTP, Situational Awareness, Detection, Anomaly
 
-## Segundo dataframe (variable en car.R -> dfCoverage)
+## Second dataframe (variable en car.R -> dfCoverage)
 
-Las técnicas hacen referencia a ATT&CK Techniques
+Techniques refer to ATT & CK Techniques
 
-  - id: Nombre del fichero yaml que se ha extraido la info
+  - id: Name of the yaml file
   - Technique: //TODO
   - Tactics: //TODO
   - Coverage: //TODO
